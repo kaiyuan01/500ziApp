@@ -44,7 +44,8 @@ export class SchedulePage {
   ) {}
 
   ionViewDidLoad() {
-    this.app.setTitle('Schedule');
+    this.app.setTitle('日程Schedule');
+    this.app.setTitle('日程Schedule');
     this.updateSchedule();
   }
 
