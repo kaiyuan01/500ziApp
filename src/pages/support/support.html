@@ -15,6 +15,27 @@
 		<img src="assets/img/appicon.svg" alt="Ionic Logo">
 	</div>
 
+	500字检测仪：
+	<form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+		<ion-list no-lines>
+			<ion-item>
+				<ion-label stacked color="primary">请输入您的大作 Enter your text below: </ion-label>
+				<ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="36" required></ion-textarea>
+			</ion-item>
+		</ion-list>
+
+		<p ion-text [hidden]="supportQuestion.valid || submitted === false" color="danger" padding-left>
+			Support message is required
+		</p>
+
+		<div padding>
+			<button ion-button block type="submit">Submit</button>
+		</div>
+	</form>
+	<!-- -->
+
+	<hr/>
+
 	<form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
 		<ion-list no-lines>
 			<ion-item>
@@ -31,4 +52,9 @@
 			<button ion-button block type="submit">Submit</button>
 		</div>
 	</form>
+	<p>
+	</p>
+	<p>
+	</p>
+
 </ion-content>

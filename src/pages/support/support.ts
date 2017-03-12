@@ -23,7 +23,7 @@ export class SupportPage {
 
   ionViewDidEnter() {
     let toast = this.toastCtrl.create({
-      message: 'This does not actually send a support request.',
+      message: '请试试我们的500字检测仪吧...', // 'This does not actually send a support request.',
       duration: 3000
     });
     toast.present();
@@ -33,12 +33,14 @@ export class SupportPage {
     this.submitted = true;
 
     if (form.valid) {
-      this.supportMessage = '';
+      //this.supportMessage = '';
+      var  theMessage = '您的大作是：' + this.supportMessage;
       this.submitted = false;
 
       let toast = this.toastCtrl.create({
-        message: 'Your support request has been sent.',
-        duration: 3000
+        //message: 'Your support request has been sent.',
+        message: theMessage,
+        duration: 6000
       });
       toast.present();
     }
