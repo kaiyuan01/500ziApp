@@ -16,11 +16,11 @@
 	</div>
 
 	500字检测仪：
-	<form #submitForm="ngForm" novalidate (ngSubmit)="submit(submitForm)">
+	<form #submitForm="ngForm" novalidate (ngSubmit)="submit500Zi(submitForm)">
 		<ion-list no-lines>
 			<ion-item>
 				<ion-label stacked color="primary">请输入您的大作 Enter your text below: </ion-label>
-				<ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="36" required></ion-textarea>
+				<ion-textarea [(ngModel)]="supportMessage" name="supportQuestion" #supportQuestion="ngModel" rows="16" required></ion-textarea>
 			</ion-item>
 		</ion-list>
 
@@ -29,7 +29,7 @@
 		</p>
 
 		<div padding>
-			<button ion-button block type="submit">Submit</button>
+			<button ion-button block type="submit500Zi">Submit</button>
 		</div>
 	</form>
 	<!-- -->
